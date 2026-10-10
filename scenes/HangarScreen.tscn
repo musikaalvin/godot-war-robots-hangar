@@ -1,0 +1,334 @@
+[gd_scene load_steps=2 format=3 uid="uid://csd7b1tkr4g5v"]
+
+[ext_resource type="Script" path="res://scripts/HangarScreen.gd" id="1_cf8o8"]
+
+[node name="HangarScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cf8o8")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.04, 0.06, 0.09, 1)
+
+[node name="TopBar" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_left = 0.0
+anchor_right = 1.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 72.0
+grow_horizontal = 2
+self_modulate = Color(0.14, 0.18, 0.22, 1)
+
+[node name="Margin" type="MarginContainer" parent="TopBar"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 12
+
+[node name="HBox" type="HBoxContainer" parent="TopBar/Margin"]
+layout_mode = 2
+alignment = 1
+
+[node name="MenuButton" type="Button" parent="TopBar/Margin/HBox"]
+custom_minimum_size = Vector2(44, 44)
+layout_mode = 2
+text = "☰"
+
+[node name="Spacer" type="Control" parent="TopBar/Margin/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Title" type="Label" parent="TopBar/Margin/HBox"]
+layout_mode = 2
+text = "HANGAR"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer2" type="Control" parent="TopBar/Margin/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Resources" type="HBoxContainer" parent="TopBar/Margin/HBox"]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="Ag" type="Panel" parent="TopBar/Margin/HBox/Resources"]
+custom_minimum_size = Vector2(80, 34)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TopBar/Margin/HBox/Resources/Ag"]
+layout_mode = 1
+aanchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "AG 1200"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Au" type="Panel" parent="TopBar/Margin/HBox/Resources"]
+custom_minimum_size = Vector2(74, 34)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TopBar/Margin/HBox/Resources/Au"]
+layout_mode = 1
+aanchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "AU 80"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Avatar" type="Panel" parent="TopBar/Margin/HBox"]
+custom_minimum_size = Vector2(44, 44)
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="TopBar/Margin/HBox/Avatar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.36, 0.79, 1, 1)
+
+[node name="Body" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 72.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 12
+
+[node name="VBox" type="VBoxContainer" parent="Body"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="StatusStrip" type="HBoxContainer" parent="Body/VBox"]
+layout_mode = 2
+alignment = 1
+
+[node name="Status1" type="Panel" parent="Body/VBox/StatusStrip"]
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Body/VBox/StatusStrip/Status1"]
+layout_mode = 1
+aanchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "READY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Status2" type="Panel" parent="Body/VBox/StatusStrip"]
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Body/VBox/StatusStrip/Status2"]
+layout_mode = 1
+aanchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "X2 BOOST"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Main" type="HBoxContainer" parent="Body/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 14
+alignment = 1
+
+[node name="LeftPanel" type="Panel" parent="Body/VBox/Main"]
+custom_minimum_size = Vector2(100, 260)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Body/VBox/Main/LeftPanel"]
+layout_mode = 1
+aanchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "ROBOT\nSTAT\nCARD"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Preview" type="Panel" parent="Body/VBox/Main"]
+custom_minimum_size = Vector2(180, 260)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ColorRect" type="ColorRect" parent="Body/VBox/Main/Preview"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.11, 0.18, 0.21, 1)
+
+[node name="Silhouette" type="ColorRect" parent="Body/VBox/Main/Preview"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -70.0
+offset_right = 40.0
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.71, 0.85, 0.93, 0.8)
+
+[node name="Label" type="Label" parent="Body/VBox/Main/Preview"]
+layout_mode = 1
+aanchors_preset = 10
+anchor_left = 0.0
+anchor_right = 1.0
+offset_top = 8.0
+offset_bottom = 36.0
+grow_horizontal = 2
+text = "NO ROBOT SELECTED"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RightPanel" type="Panel" parent="Body/VBox/Main"]
+custom_minimum_size = Vector2(100, 260)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Body/VBox/Main/RightPanel"]
+layout_mode = 1
+aanchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "EQUIP\n&\nWEAPONS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SlotsSection" type="Panel" parent="Body/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Margin" type="MarginContainer" parent="Body/VBox/SlotsSection"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBox" type="VBoxContainer" parent="Body/VBox/SlotsSection/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Header" type="Label" parent="Body/VBox/SlotsSection/Margin/VBox"]
+layout_mode = 2
+text = "HANGAR SLOTS"
+
+[node name="SlotsGrid" type="GridContainer" parent="Body/VBox/SlotsSection/Margin/VBox"]
+layout_mode = 2
+columns = 3
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+
+[node name="BottomBar" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 14.0
+offset_top = -92.0
+offset_right = -14.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+self_modulate = Color(0.12, 0.15, 0.19, 1)
+
+[node name="Margin" type="MarginContainer" parent="BottomBar"]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 8
+
+[node name="HBox" type="HBoxContainer" parent="BottomBar/Margin"]
+layout_mode = 2
+alignment = 1
+
+[node name="Garage" type="Button" parent="BottomBar/Margin/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Garage"
+
+[node name="Store" type="Button" parent="BottomBar/Margin/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Store"
+
+[node name="Battle" type="Button" parent="BottomBar/Margin/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Battle"
+
+[node name="Missions" type="Button" parent="BottomBar/Margin/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Ops"
+
+[node name="Profile" type="Button" parent="BottomBar/Margin/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Pilot"
+
+[node name="Deploy" type="Button" parent="."]
+layout_mode = 1
+aanchors_preset = 8
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -80.0
+offset_top = -122.0
+offset_right = 80.0
+offset_bottom = -78.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "DEPLOY"
