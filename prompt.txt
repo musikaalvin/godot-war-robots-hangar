@@ -1,0 +1,33 @@
+MECH ASSAULT — FULL HANGAR / EQUIPMENT / INVENTORY UI REBUILD
+
+MISSION:
+Rebuild the Mech Assault hangar and equipment UI as a modern original robot-combat game interface inspired by the information hierarchy and presentation principles of premium mech battler UIs, while remaining distinct and original.
+
+IMPORTANT:
+- Do NOT create a pixel-perfect clone of War Robots.
+- Do NOT copy logos, exact icons, exact text, exact colors, or proprietary art.
+- Use original Mech Assault branding and visual identity.
+- Keep the experience focused on premium sci-fi soldier-mech presentation.
+- Preserve the existing game systems; do not remove robots, weapons, Titans, maps, combat, weather, hazards, AI, or existing data.
+
+GOAL:
+Create a strong, premium hangar screen that feels like a real 3D maintenance bay or robot facility with dark military-tech styling, clear information hierarchy, and a dominant battle CTA.
+
+VISUAL DIRECTION:
+- Dark graphite / stealth navy environment with cyan-blue glow accents
+- Large central robot display area with layered platform composition
+- Sleek panel borders, subtle glow, HUD metaphors, and futuristic UI cues
+- Compact top resource bar with premium currency, alloy, and part counters
+- Clean bottom nav and a dominant battle button
+- Empty slots remain physical and believable; not giant blank cards
+- Equipment and inventory are separate, structured screens that feel like meaningful menus
+
+CORE UX RULES:
+- The 3D hanger scene should feel like the visual centerpiece
+- UI overlays must remain sparse, elegant, and intentional
+- Robot selection should highlight the platform and show concise details
+- Keep loadout / equipment / inventory separate from the main hangar scene
+- Use one dominant CTA for battle
+- The UI should feel premium, modern, readable, and game-grade
+
+Do not overcomplicate the implementation. Keep it polished, functional, and visually strong.
