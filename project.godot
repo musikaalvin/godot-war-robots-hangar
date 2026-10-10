@@ -4,7 +4,7 @@
 config_version=5
 
 [application]
-config/name="War Robots Hangar UI"
+config/name="Mech Assault Hangar UI"
 run/main_scene="res://scenes/HangarScreen.tscn"
 config/features=PackedStringArray("4.3")
 config/icon="res://icon.svg"
