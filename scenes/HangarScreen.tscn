@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://csd7b1tkr4g5v"]
+[gd_scene load_steps=2 format=3 uid="uid://csd7b1tkr4g5v"]
 
 [ext_resource type="Script" path="res://scripts/HangarScreen.gd" id="1_cf8o8"]
-[ext_resource type="Theme" path="res://themes/PremiumTheme.tres" id="2_h5k8m"]
 
 [node name="HangarScreen" type="Control"]
 layout_mode = 3
@@ -11,7 +10,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_cf8o8")
-theme = ExtResource("2_h5k8m")
 
 [node name="Background" type="ColorRect" parent="."]
 layout_mode = 1
@@ -20,16 +18,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.05, 0.07, 0.11, 1)
-
-[node name="GradientOverlay" type="ColorRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 0)
+color = Color(0.04, 0.06, 0.09, 1)
 
 [node name="TopBar" type="PanelContainer" parent="."]
 layout_mode = 1
@@ -39,15 +28,15 @@ anchor_right = 1.0
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 0.0
-offset_bottom = 70.0
+offset_bottom = 76.0
 grow_horizontal = 2
 
 [node name="Margin" type="MarginContainer" parent="TopBar"]
 layout_mode = 2
 theme_override_constants/margin_left = 16
-theme_override_constants/margin_top = 10
+theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 16
-theme_override_constants/margin_bottom = 10
+theme_override_constants/margin_bottom = 12
 
 [node name="HBox" type="HBoxContainer" parent="TopBar/Margin"]
 layout_mode = 2
@@ -57,7 +46,7 @@ alignment = 1
 custom_minimum_size = Vector2(42, 42)
 layout_mode = 2
 text = "☰"
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 22
 
 [node name="Spacer" type="Control" parent="TopBar/Margin/HBox"]
 layout_mode = 2
@@ -65,11 +54,11 @@ size_flags_horizontal = 3
 
 [node name="Title" type="Label" parent="TopBar/Margin/HBox"]
 layout_mode = 2
-text = "H A N G A R"
+text = "HANGAR"
 horizontal_alignment = 1
 vertical_alignment = 1
-theme_override_font_sizes/font_size = 16
-theme_override_colors/font_color = Color(0.36, 0.79, 1, 1)
+theme_override_colors/font_color = Color(0.38, 0.74, 1, 1)
+theme_override_font_sizes/font_size = 15
 
 [node name="Spacer2" type="Control" parent="TopBar/Margin/HBox"]
 layout_mode = 2
@@ -77,53 +66,52 @@ size_flags_horizontal = 3
 
 [node name="Resources" type="HBoxContainer" parent="TopBar/Margin/HBox"]
 layout_mode = 2
-theme_override_constants/separation = 10
-alignment = 1
+theme_override_constants/separation = 8
 
 [node name="Ag" type="PanelContainer" parent="TopBar/Margin/HBox/Resources"]
-custom_minimum_size = Vector2(90, 32)
+custom_minimum_size = Vector2(88, 32)
 layout_mode = 2
 
-[node name="Margin2" type="MarginContainer" parent="TopBar/Margin/HBox/Resources/Ag"]
+[node name="MarginAg" type="MarginContainer" parent="TopBar/Margin/HBox/Resources/Ag"]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="HBox2" type="HBoxContainer" parent="TopBar/Margin/HBox/Resources/Ag/Margin2"]
+[node name="HBoxAg" type="HBoxContainer" parent="TopBar/Margin/HBox/Resources/Ag/MarginAg"]
 layout_mode = 2
 alignment = 1
 
-[node name="Icon" type="Label" parent="TopBar/Margin/HBox/Resources/Ag/Margin2/HBox2"]
+[node name="Icon" type="Label" parent="TopBar/Margin/HBox/Resources/Ag/MarginAg/HBoxAg"]
 layout_mode = 2
 text = "◆"
-theme_override_font_sizes/font_size = 14
 theme_override_colors/font_color = Color(0.87, 0.72, 0.36, 1)
+theme_override_font_sizes/font_size = 12
 
-[node name="Label" type="Label" parent="TopBar/Margin/HBox/Resources/Ag/Margin2/HBox2"]
+[node name="Value" type="Label" parent="TopBar/Margin/HBox/Resources/Ag/MarginAg/HBoxAg"]
 layout_mode = 2
-text = "12k"
+text = "12K"
 theme_override_font_sizes/font_size = 12
 
 [node name="Au" type="PanelContainer" parent="TopBar/Margin/HBox/Resources"]
-custom_minimum_size = Vector2(90, 32)
+custom_minimum_size = Vector2(88, 32)
 layout_mode = 2
 
-[node name="Margin3" type="MarginContainer" parent="TopBar/Margin/HBox/Resources/Au"]
+[node name="MarginAu" type="MarginContainer" parent="TopBar/Margin/HBox/Resources/Au"]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="HBox3" type="HBoxContainer" parent="TopBar/Margin/HBox/Resources/Au/Margin3"]
+[node name="HBoxAu" type="HBoxContainer" parent="TopBar/Margin/HBox/Resources/Au/MarginAu"]
 layout_mode = 2
 alignment = 1
 
-[node name="Icon" type="Label" parent="TopBar/Margin/HBox/Resources/Au/Margin3/HBox3"]
+[node name="Icon" type="Label" parent="TopBar/Margin/HBox/Resources/Au/MarginAu/HBoxAu"]
 layout_mode = 2
 text = "◈"
-theme_override_font_sizes/font_size = 14
-theme_override_colors/font_color = Color(1, 0.84, 0.4, 1)
+theme_override_colors/font_color = Color(1, 0.84, 0.42, 1)
+theme_override_font_sizes/font_size = 12
 
-[node name="Label" type="Label" parent="TopBar/Margin/HBox/Resources/Au/Margin3/HBox3"]
+[node name="Value" type="Label" parent="TopBar/Margin/HBox/Resources/Au/MarginAu/HBoxAu"]
 layout_mode = 2
 text = "180"
 theme_override_font_sizes/font_size = 12
@@ -131,161 +119,166 @@ theme_override_font_sizes/font_size = 12
 [node name="Avatar" type="Button" parent="TopBar/Margin/HBox"]
 custom_minimum_size = Vector2(42, 42)
 layout_mode = 2
-modulate = Color(1, 1, 1, 0.9)
+text = "P"
 
 [node name="Body" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 70.0
+offset_top = 76.0
 offset_bottom = 0.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 14
-theme_override_constants/margin_top = 14
+theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 14
-theme_override_constants/margin_bottom = 100
+theme_override_constants/margin_bottom = 96
 
 [node name="VBox" type="VBoxContainer" parent="Body"]
 layout_mode = 2
-theme_override_constants/separation = 16
+theme_override_constants/separation = 14
 
 [node name="StatusBar" type="HBoxContainer" parent="Body/VBox"]
 layout_mode = 2
 theme_override_constants/separation = 10
 
 [node name="ReadyStatus" type="PanelContainer" parent="Body/VBox/StatusBar"]
-custom_minimum_size = Vector2(0, 36)
+custom_minimum_size = Vector2(0, 34)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Margin4" type="MarginContainer" parent="Body/VBox/StatusBar/ReadyStatus"]
+[node name="Margin" type="MarginContainer" parent="Body/VBox/StatusBar/ReadyStatus"]
 layout_mode = 2
 theme_override_constants/margin_left = 12
 theme_override_constants/margin_right = 12
 
-[node name="HBox4" type="HBoxContainer" parent="Body/VBox/StatusBar/ReadyStatus/Margin4"]
+[node name="HBox" type="HBoxContainer" parent="Body/VBox/StatusBar/ReadyStatus/Margin"]
 layout_mode = 2
 alignment = 1
 
-[node name="Dot" type="Label" parent="Body/VBox/StatusBar/ReadyStatus/Margin4/HBox4"]
+[node name="Dot" type="Label" parent="Body/VBox/StatusBar/ReadyStatus/Margin/HBox"]
 layout_mode = 2
 text = "●"
-theme_override_font_sizes/font_size = 12
-theme_override_colors/font_color = Color(0.36, 1, 0.6, 1)
+theme_override_colors/font_color = Color(0.42, 1, 0.68, 1)
+theme_override_font_sizes/font_size = 11
 
-[node name="Label2" type="Label" parent="Body/VBox/StatusBar/ReadyStatus/Margin4/HBox4"]
+[node name="Text" type="Label" parent="Body/VBox/StatusBar/ReadyStatus/Margin/HBox"]
 layout_mode = 2
 text = "READY FOR BATTLE"
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 11
 
 [node name="BoostStatus" type="PanelContainer" parent="Body/VBox/StatusBar"]
-custom_minimum_size = Vector2(0, 36)
+custom_minimum_size = Vector2(0, 34)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Margin5" type="MarginContainer" parent="Body/VBox/StatusBar/BoostStatus"]
+[node name="Margin" type="MarginContainer" parent="Body/VBox/StatusBar/BoostStatus"]
 layout_mode = 2
 theme_override_constants/margin_left = 12
 theme_override_constants/margin_right = 12
 
-[node name="HBox5" type="HBoxContainer" parent="Body/VBox/StatusBar/BoostStatus/Margin5"]
+[node name="HBox" type="HBoxContainer" parent="Body/VBox/StatusBar/BoostStatus/Margin"]
 layout_mode = 2
 alignment = 1
 
-[node name="Icon2" type="Label" parent="Body/VBox/StatusBar/BoostStatus/Margin5/HBox5"]
+[node name="Icon" type="Label" parent="Body/VBox/StatusBar/BoostStatus/Margin/HBox"]
 layout_mode = 2
 text = "⚡"
-theme_override_font_sizes/font_size = 12
-theme_override_colors/font_color = Color(0.36, 0.79, 1, 1)
+theme_override_colors/font_color = Color(0.38, 0.8, 1, 1)
+theme_override_font_sizes/font_size = 11
 
-[node name="Label3" type="Label" parent="Body/VBox/StatusBar/BoostStatus/Margin5/HBox5"]
+[node name="Text" type="Label" parent="Body/VBox/StatusBar/BoostStatus/Margin/HBox"]
 layout_mode = 2
 text = "2X EARNING"
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 11
 
 [node name="MainContent" type="HBoxContainer" parent="Body/VBox"]
 layout_mode = 2
-theme_override_constants/separation = 14
+theme_override_constants/separation = 12
 size_flags_vertical = 3
 
 [node name="LeftPanel" type="PanelContainer" parent="Body/VBox/MainContent"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 
-[node name="Margin6" type="MarginContainer" parent="Body/VBox/MainContent/LeftPanel"]
+[node name="Margin" type="MarginContainer" parent="Body/VBox/MainContent/LeftPanel"]
 layout_mode = 2
 theme_override_constants/margin_left = 12
 theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 12
 theme_override_constants/margin_bottom = 12
 
-[node name="VBox2" type="VBoxContainer" parent="Body/VBox/MainContent/LeftPanel/Margin6"]
+[node name="VBox" type="VBoxContainer" parent="Body/VBox/MainContent/LeftPanel/Margin"]
 layout_mode = 2
-theme_override_constants/separation = 12
 alignment = 1
 
-[node name="StatLabel" type="Label" parent="Body/VBox/MainContent/LeftPanel/Margin6/VBox2"]
+[node name="Header" type="Label" parent="Body/VBox/MainContent/LeftPanel/Margin/VBox"]
 layout_mode = 2
 text = "STATS"
+theme_override_colors/font_color = Color(0.38, 0.76, 1, 1)
 theme_override_font_sizes/font_size = 12
-theme_override_colors/font_color = Color(0.36, 0.79, 1, 1)
 
-[node name="Stat1" type="Label" parent="Body/VBox/MainContent/LeftPanel/Margin6/VBox2"]
+[node name="Stat1" type="Label" parent="Body/VBox/MainContent/LeftPanel/Margin/VBox"]
 layout_mode = 2
-text = "HP: 45K"
-theme_override_font_sizes/font_size = 11
+text = "HP 45K"
+theme_override_font_sizes/font_size = 10
 
-[node name="Stat2" type="Label" parent="Body/VBox/MainContent/LeftPanel/Margin6/VBox2"]
+[node name="Stat2" type="Label" parent="Body/VBox/MainContent/LeftPanel/Margin/VBox"]
 layout_mode = 2
-text = "DMG: 8.2K"
-theme_override_font_sizes/font_size = 11
+text = "DMG 8.2K"
+theme_override_font_sizes/font_size = 10
 
-[node name="Stat3" type="Label" parent="Body/VBox/MainContent/LeftPanel/Margin6/VBox2"]
+[node name="Stat3" type="Label" parent="Body/VBox/MainContent/LeftPanel/Margin/VBox"]
 layout_mode = 2
-text = "SPEED: 72"
-theme_override_font_sizes/font_size = 11
+text = "SPD 72"
+theme_override_font_sizes/font_size = 10
 
-[node name="Preview" type="PanelContainer" parent="Body/VBox/MainContent"]
-custom_minimum_size = Vector2(0, 0)
+[node name="PreviewPanel" type="PanelContainer" parent="Body/VBox/MainContent"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="PreviewBG" type="ColorRect" parent="Body/VBox/MainContent/Preview"]
+[node name="PreviewBG" type="ColorRect" parent="Body/VBox/MainContent/PreviewPanel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.09, 0.14, 0.17, 1)
+color = Color(0.09, 0.13, 0.17, 1)
 
-[node name="Margin7" type="MarginContainer" parent="Body/VBox/MainContent/Preview"]
+[node name="Margin" type="MarginContainer" parent="Body/VBox/MainContent/PreviewPanel"]
 layout_mode = 2
 theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 20
+theme_override_constants/margin_top = 18
 theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 20
+theme_override_constants/margin_bottom = 18
 
-[node name="VBox3" type="VBoxContainer" parent="Body/VBox/MainContent/Preview/Margin7"]
+[node name="VBox" type="VBoxContainer" parent="Body/VBox/MainContent/PreviewPanel/Margin"]
 layout_mode = 2
 alignment = 1
 
-[node name="RobotName" type="Label" parent="Body/VBox/MainContent/Preview/Margin7/VBox3"]
+[node name="Name" type="Label" parent="Body/VBox/MainContent/PreviewPanel/Margin/VBox"]
 layout_mode = 2
 text = "NO UNIT SELECTED"
 horizontal_alignment = 1
 theme_override_font_sizes/font_size = 14
-theme_override_colors/font_color = Color(0.85, 0.85, 0.85, 1)
 
-[node name="Silhouette" type="ColorRect" parent="Body/VBox/MainContent/Preview/Margin7/VBox3"]
+[node name="RobotArt" type="PanelContainer" parent="Body/VBox/MainContent/PreviewPanel/Margin/VBox"]
 custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 size_flags_horizontal = 4
-color = Color(0.25, 0.42, 0.48, 0.6)
 
-[node name="Label" type="Label" parent="Body/VBox/MainContent/Preview/Margin7/VBox3/Silhouette"]
+[node name="RobotShape" type="ColorRect" parent="Body/VBox/MainContent/PreviewPanel/Margin/VBox/RobotArt"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.24, 0.39, 0.47, 0.78)
+
+[node name="RobotIcon" type="Label" parent="Body/VBox/MainContent/PreviewPanel/Margin/VBox/RobotArt/RobotShape"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -295,46 +288,46 @@ grow_vertical = 2
 text = "🤖"
 horizontal_alignment = 1
 vertical_alignment = 1
-theme_override_font_sizes/font_size = 48
+theme_override_font_sizes/font_size = 46
 
 [node name="RightPanel" type="PanelContainer" parent="Body/VBox/MainContent"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 
-[node name="Margin8" type="MarginContainer" parent="Body/VBox/MainContent/RightPanel"]
+[node name="Margin" type="MarginContainer" parent="Body/VBox/MainContent/RightPanel"]
 layout_mode = 2
 theme_override_constants/margin_left = 12
 theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 12
 theme_override_constants/margin_bottom = 12
 
-[node name="VBox4" type="VBoxContainer" parent="Body/VBox/MainContent/RightPanel/Margin8"]
+[node name="VBox" type="VBoxContainer" parent="Body/VBox/MainContent/RightPanel/Margin"]
 layout_mode = 2
 theme_override_constants/separation = 10
 alignment = 1
 
-[node name="EquipLabel" type="Label" parent="Body/VBox/MainContent/RightPanel/Margin8/VBox4"]
+[node name="Header" type="Label" parent="Body/VBox/MainContent/RightPanel/Margin/VBox"]
 layout_mode = 2
 text = "WEAPONS"
+theme_override_colors/font_color = Color(0.38, 0.76, 1, 1)
 theme_override_font_sizes/font_size = 12
-theme_override_colors/font_color = Color(0.36, 0.79, 1, 1)
 
-[node name="Weapon1" type="Label" parent="Body/VBox/MainContent/RightPanel/Margin8/VBox4"]
+[node name="W1" type="Label" parent="Body/VBox/MainContent/RightPanel/Margin/VBox"]
 layout_mode = 2
 text = "[━━] EMPTY"
 theme_override_font_sizes/font_size = 10
 
-[node name="Weapon2" type="Label" parent="Body/VBox/MainContent/RightPanel/Margin8/VBox4"]
+[node name="W2" type="Label" parent="Body/VBox/MainContent/RightPanel/Margin/VBox"]
 layout_mode = 2
 text = "[━━] EMPTY"
 theme_override_font_sizes/font_size = 10
 
-[node name="Weapon3" type="Label" parent="Body/VBox/MainContent/RightPanel/Margin8/VBox4"]
+[node name="W3" type="Label" parent="Body/VBox/MainContent/RightPanel/Margin/VBox"]
 layout_mode = 2
 text = "[━━] EMPTY"
 theme_override_font_sizes/font_size = 10
 
-[node name="Weapon4" type="Label" parent="Body/VBox/MainContent/RightPanel/Margin8/VBox4"]
+[node name="W4" type="Label" parent="Body/VBox/MainContent/RightPanel/Margin/VBox"]
 layout_mode = 2
 text = "[━━] EMPTY"
 theme_override_font_sizes/font_size = 10
@@ -343,28 +336,28 @@ theme_override_font_sizes/font_size = 10
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Margin9" type="MarginContainer" parent="Body/VBox/SlotsSection"]
+[node name="Margin" type="MarginContainer" parent="Body/VBox/SlotsSection"]
 layout_mode = 2
-theme_override_constants/margin_left = 14
-theme_override_constants/margin_top = 14
-theme_override_constants/margin_right = 14
-theme_override_constants/margin_bottom = 14
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
 
-[node name="VBox5" type="VBoxContainer" parent="Body/VBox/SlotsSection/Margin9"]
+[node name="VBox" type="VBoxContainer" parent="Body/VBox/SlotsSection/Margin"]
 layout_mode = 2
-theme_override_constants/separation = 12
+theme_override_constants/separation = 10
 
-[node name="Header" type="Label" parent="Body/VBox/SlotsSection/Margin9/VBox5"]
+[node name="Header" type="Label" parent="Body/VBox/SlotsSection/Margin/VBox"]
 layout_mode = 2
 text = "AVAILABLE SLOTS"
+theme_override_colors/font_color = Color(0.38, 0.76, 1, 1)
 theme_override_font_sizes/font_size = 12
-theme_override_colors/font_color = Color(0.36, 0.79, 1, 1)
 
-[node name="SlotsGrid" type="GridContainer" parent="Body/VBox/SlotsSection/Margin9/VBox5"]
+[node name="SlotsGrid" type="GridContainer" parent="Body/VBox/SlotsSection/Margin/VBox"]
 layout_mode = 2
 columns = 3
-theme_override_constants/h_separation = 12
-theme_override_constants/v_separation = 12
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
 
 [node name="BottomBar" type="PanelContainer" parent="."]
 layout_mode = 1
@@ -376,56 +369,49 @@ offset_top = -100.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="Margin10" type="MarginContainer" parent="BottomBar"]
+[node name="Margin" type="MarginContainer" parent="BottomBar"]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 8
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 8
 
-[node name="VBox6" type="VBoxContainer" parent="BottomBar/Margin10"]
+[node name="VBox" type="VBoxContainer" parent="BottomBar/Margin"]
 layout_mode = 2
-theme_override_constants/separation = 8
+theme_override_constants/separation = 7
 
-[node name="NavGrid" type="GridContainer" parent="BottomBar/Margin10/VBox6"]
+[node name="NavGrid" type="GridContainer" parent="BottomBar/Margin/VBox"]
 layout_mode = 2
 columns = 5
 theme_override_constants/h_separation = 8
-theme_override_constants/v_separation = 8
 
-[node name="GarageBtn" type="Button" parent="BottomBar/Margin10/VBox6/NavGrid"]
+[node name="GarageBtn" type="Button" parent="BottomBar/Margin/VBox/NavGrid"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Garage"
-theme_override_font_sizes/font_size = 11
 
-[node name="StoreBtn" type="Button" parent="BottomBar/Margin10/VBox6/NavGrid"]
+[node name="StoreBtn" type="Button" parent="BottomBar/Margin/VBox/NavGrid"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Store"
-theme_override_font_sizes/font_size = 11
 
-[node name="BattleBtn" type="Button" parent="BottomBar/Margin10/VBox6/NavGrid"]
+[node name="BattleBtn" type="Button" parent="BottomBar/Margin/VBox/NavGrid"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Battle"
-theme_override_font_sizes/font_size = 11
 
-[node name="MissionsBtn" type="Button" parent="BottomBar/Margin10/VBox6/NavGrid"]
+[node name="MissionsBtn" type="Button" parent="BottomBar/Margin/VBox/NavGrid"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Ops"
-theme_override_font_sizes/font_size = 11
 
-[node name="ProfileBtn" type="Button" parent="BottomBar/Margin10/VBox6/NavGrid"]
+[node name="ProfileBtn" type="Button" parent="BottomBar/Margin/VBox/NavGrid"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Pilot"
-theme_override_font_sizes/font_size = 11
 
-[node name="DeployBtn" type="Button" parent="BottomBar/Margin10/VBox6"]
+[node name="DeployBtn" type="Button" parent="BottomBar/Margin/VBox"]
 layout_mode = 2
 size_flags_horizontal = 3
 custom_minimum_size = Vector2(0, 48)
 text = "DEPLOY FOR BATTLE"
-theme_override_font_sizes/font_size = 13
